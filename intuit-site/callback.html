@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'none'; form-action 'none'">
+<title>RR Financials, connecting QuickBooks</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="callback.js" defer></script>
+</head>
+<body>
+<main>
+  <header>
+    <div class="mark">RR <span>Financials</span></div>
+    <p class="sub">Internal back office software for Ruoff Restaurants</p>
+  </header>
+
+  <section id="received" hidden>
+    <h1>Authorization received</h1>
+    <p class="lede">Copy this address and paste it into the RR Financials window that is waiting for it.</p>
+    <textarea id="address" class="paste" rows="5" readonly spellcheck="false"
+              aria-label="The address to paste into RR Financials"></textarea>
+    <p class="actions">
+      <button id="copy" type="button" class="copy">Copy the address</button>
+      <span id="copy-status" class="status" role="status"></span>
+    </p>
+    <div class="note">
+      It works once and expires within minutes. Paste it only into RR Financials. It has already been removed from
+      this browser's address bar and history, so copy it before you leave or refresh this page.
+    </div>
+  </section>
+
+  <section id="refused" hidden>
+    <h1>Not connected</h1>
+    <p class="lede">Intuit did not connect RR Financials to QuickBooks.</p>
+    <p>Intuit said: <strong id="intuit-said"></strong></p>
+    <p>Nothing was connected and nothing changed. If that was not intended, run the authorization step again.</p>
+  </section>
+
+  <section id="nothing" hidden>
+    <h1>Nothing to do here</h1>
+    <p class="lede">This page receives Intuit's reply while RR Financials is being connected to QuickBooks.</p>
+    <p>If you opened it directly, there is nothing to do. To connect, see
+      <a href="connect.html">connecting and reconnecting</a>.</p>
+  </section>
+
+  <noscript>
+    <h1>Connecting QuickBooks</h1>
+    <p class="lede">If Intuit sent you here while connecting RR Financials, copy the whole address from your browser's
+    address bar and paste it into the RR Financials window.</p>
+  </noscript>
+
+  <footer>
+    <span>&copy; 2026 Ruoff Restaurants</span>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy policy</a>
+    <a href="mailto:ruoff.restaurants@gmail.com">Contact</a>
+  </footer>
+</main>
+</body>
+</html>

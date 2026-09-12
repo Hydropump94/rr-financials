@@ -48,3 +48,32 @@ footer {
   gap: 0.5rem 1.5rem;
 }
 footer a { white-space: nowrap; }
+
+/* callback.html: the address to paste, and its copy button */
+[hidden] { display: none !important; }
+.paste {
+  width: 100%;
+  margin: 0.5rem 0 0;
+  padding: 0.75rem;
+  font: 0.85rem/1.5 ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  resize: vertical;
+  word-break: break-all;
+}
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 0.9rem; }
+.copy {
+  font: inherit;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  border: 0;
+  border-radius: 6px;
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+}
+.copy:hover { filter: brightness(1.08); }
+.copy:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.status { color: var(--soft); font-size: 0.92rem; }
